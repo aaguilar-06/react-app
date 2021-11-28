@@ -1,0 +1,10 @@
+###LOGO AAA
+<div class="card-header text-center">
+      <a href="index.html" class="h1">
+		  <img src="images/logo-triple-A.png">
+	  </a>	  
+</div>
+
+###TITULO
+
+<title>Triple A ESP - Registro de Usuario</title>
