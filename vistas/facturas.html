@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caracal Caracal Red Social de Imágenes</title>
+  <title>Triple A ESP - Panel Administrativo</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -159,11 +159,16 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="images/caracal-logo-web.png" alt="Caracal Caracal Logo" width="220">
+    <a href="index.html" class="brand-link">
+      <img src="images/logo-triple-A-2.png" width="200">
     </a>
 
     <!-- Sidebar -->
+
+
+
+
+      <!-- Sidebar MENU COMPLETA-->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -171,21 +176,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Administrador</a>
-        </div>
-      </div>
-
-
-
-      <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Administrador</a>
+          <a href="#" class="d-block">Administrador</a> <!-- Nombre de Usuario-->
         </div>
       </div>
 
@@ -198,14 +189,98 @@
                with font-awesome or any other icon font library -->
        
     
-          
+
           <li class="nav-header">MENÚ</li>
-          <li class="nav-item">
-            <a href="administradores.html" class="nav-link">
-              <i class="nav-icon fas fa-columns"></i>
+			<!-- Inicio M1 VISIBLE SOLO PARA ADMINISTRADOR -->
+			 <li class="nav-item menu-closed">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
-               Ver Administradores
-                <span class="badge badge-info right">5</span>
+                Facturas <span class="badge badge-danger right">.</span>
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="generar-factura.html" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Generar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="facturas.html" class="nav-link">
+                  <i class="fas fa-receipt nav-icon"></i>
+                  <p>Gestionar</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+			<!-- FIN M1 -->
+			
+			<!-- Inicio M1 VISIBLE SOLO PARA ADMINISTRADOR -->
+			 <li class="nav-item menu-closed">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-landmark"></i>
+              <p>
+                Impuestos & Subsidios <span class="badge badge-danger right">.</span>
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="crear-impuestos.html" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Crear</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="gestionar-impuestos.html" class="nav-link">
+                  <i class="fas fa-list-ul nav-icon"></i>
+                  <p>Gestionar</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+			<!-- FIN M1 -->
+			
+			<!-- Inicio M1 VISIBLE SOLO PARA ADMINISTRADOR -->
+			 <li class="nav-item menu-closed">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-city"></i>
+              <p>
+                Predios <span class="badge badge-warning right">.</span>
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="crear-predios.html" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Crear</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="gestionar-predios.html" class="nav-link">
+                  <i class="fas fa-list-ul nav-icon"></i>
+                  <p>Gestionar</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+			<!-- FIN M1 -->
+			
+			
+			
+			
+			
+          <li class="nav-item">
+            <a href="configuracion.html" class="nav-link">
+              <i class="nav-icon fas fa-check-double"></i>
+              <p>
+               Configuración Valores <span class="badge badge-danger right">.</span>
               </p>
             </a>
           </li>
@@ -253,9 +328,9 @@
       </nav>
       <!-- /.sidebar-menu -->
     </div>
+    <!-- /.sidebar MENU COMPLETA-->
     <!-- /.sidebar -->
-    <!-- /.sidebar -->
-    </div>
+
     <!-- /.sidebar -->
   </aside>
 
@@ -266,7 +341,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista de Usuarios</h1>
+            <h1>Gestión de facturas</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -293,301 +368,454 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Usuario</th>
-                    <th>Nombre</th>
-                    <th>Estado</th>
-                    <th>Editar</th>
+                    <th>Factura</th>
+                    <th>Periodo</th>
+                    <th>F.Venc</th>
+                    <th>P&oacute;liza</th>
+                    <th>Valor</th>
+					<th>Estado</th>
+					<th>CC/NIT</th>
+					<th>Titular</th>
+					<th>Predio</th>
+					<th>Dirección</th>
+					<th>Editar</th>
 					<th>Eliminar</th>
                   </tr>
                   </thead>
                   <tbody>
+					  
 					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>7</td>
-                    <td>danycabarcas@gmail.com
-                    </td>
-                    <td>Daniel Cabarcas</td>
-					  <td>Activo</td>
-                    <td> <a class="btn btn-info btn-sm" href="#">
+					  <tr>
+					  		<td>121346451</td>
+						    <td>202111</td>
+						  	<td>2021-12-10</td>
+						 	<td>134967</td>
+						  	<td>$321.570</td>
+						  	<td>Pendiente</td>
+						  	<td>12345678</td>
+						  	<td>Carlos Galindo Sierra</td>
+						  	<td>525581</td>
+						  	<td>Cra 43 # 82 - 115</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a></td>
-                    <td><a class="btn btn-danger btn-sm" href="#">
+						  	<td><a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">
                               </i>
                               Delete
                           </a></td>
-                  </tr>
+					  
+					  </tr>
 					  <!-- Fin Usuario-->
 					  
 					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>8&nbsp;</td>
-                    <td>maria@gmail.com
-                    </td>
-                    <td>maria</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
+					  <tr>
+					  		<td>121346452</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>134987</td>
+						  	<td>$221.590</td>
+						  	<td>Pendiente</td>
+						  	<td>73007889</td>
+						  	<td>Carlos Manuel Guerra</td>
+						  	<td>525530</td>
+						  	<td>Cra 30 # 11 - 51</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
 					  <!-- Fin Usuario-->
 					  
 					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>9&nbsp;</td>
-                    <td>juan@gmail.com
-                    </td>
-                    <td>juan</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>10&nbsp;</td>
-                    <td>martin@gmail.com
-                    </td>
-                    <td>Martin</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>11&nbsp;</td>
-                    <td>armando@gmail.com
-                    </td>
-                    <td>armando</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>12&nbsp;</td>
-                    <td>andreina@gmail.com
-                    </td>
-                    <td>andreina Maria</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>13&nbsp;</td>
-                    <td>paola@gmail.com
-                    </td>
-                    <td>Paola&nbsp;</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>14&nbsp;</td>
-                    <td>maritza@gmail.com
-                    </td>
-                    <td>maritza</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>15&nbsp;</td>
-                    <td>sebastian@gmail.com
-                    </td>
-                    <td>sebastian</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>16&nbsp;</td>
-                    <td>joseluis@gmail.com
-                    </td>
-                    <td>jose luis</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>17</td>
-                    <td>carlos@gmail.com
-                    </td>
-                    <td>Carlos</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>18</td>
-                    <td>fernando@gmail.com
-                    </td>
-                    <td>Fernando</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>19</td>
-                    <td>Fernanda@gmail.com
-                    </td>
-                    <td>Fernanda</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>20</td>
-                    <td>felipe@gmail.com
-                    </td>
-                    <td>felipe</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>21</td>
-                    <td>carla@gmail.com
-                    </td>
-                    <td>Carla</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>22</td>
-                    <td>Daniela@gmail.com
-                    </td>
-                    <td>Daniela</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>23</td>
-                    <td>alexandra@gmail.com
-                    </td>
-                    <td>Alexandra</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>24</td>
-                    <td>Josedavid@gmail.com
-                    </td>
-                    <td>Jose David</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>25</td>
-                    <td>Josedaniel@gmail.com
-                    </td>
-                    <td>Jose Daniel</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>26</td>
-                    <td>Armandoh@gmail.com
-                    </td>
-                    <td>Armando H</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>27</td>
-                    <td>felipex
-                    </td>
-                    <td>Felipe x</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>28</td>
-                    <td>alexanderj@gmail.com
-                    </td>
-                    <td>alexander Jose</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>29</td>
-                    <td>Carlosdavid@gmail.com
-                    </td>
-                    <td>Carlos David</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
-					  <!-- Fin Usuario-->
-					  <!-- Inicio Usuario-->
-                  <tr>
-                    <td>30</td>
-                    <td>Fernandojose@gmail.com
-                    </td>
-                    <td>Fernando Jose</td>
-					  <td>Activo</td>
-                    <td> <button type="button" class="btn btn-block btn-success btn-xs">Editar</button></td>
-                    <td><button type="button" class="btn btn-block btn-danger btn-xs">Eliminar</button></td>
-                  </tr>
+					  <tr>
+					  		<td>121346453</td>
+						    <td>202111</td>
+						  	<td>2021-12-10</td>
+						 	<td>234987</td>
+						  	<td>$447.997</td>
+						  	<td>Pagada</td>
+						  	<td>1082936887</td>
+						  	<td>Andrea Carolina Ferrer</td>
+						  	<td>525399</td>
+						  	<td>Cl 15 # 30 - 22</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
 					  <!-- Fin Usuario-->
 					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>121346489</td>
+						    <td>202110</td>
+						  	<td>2021-12-10</td>
+						 	<td>234987</td>
+						  	<td>$147.660</td>
+						  	<td>Pagada</td>
+						  	<td>1080333811</td>
+						  	<td>Jose Manuel Rodriguez</td>
+						  	<td>525778</td>
+						  	<td>Cl 17 # 40 - 76</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
 					  
+					  </tr>
+					  <!-- Fin Usuario-->
+				
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>121346300</td>
+						    <td>202111</td>
+						  	<td>2021-12-12</td>
+						 	<td>234987</td>
+						  	<td>$630.890</td>
+						  	<td>Pagada</td>
+						  	<td>84388991</td>
+						  	<td>Marcos Atencio Jaimes</td>
+						  	<td>525799</td>
+						  	<td>Cl 21 # 30 - 11</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>121346970</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234111</td>
+						  	<td>$330.000</td>
+						  	<td>Pendiente</td>
+						  	<td>84399811</td>
+						  	<td>Jaime Medina</td>
+						  	<td>429790</td>
+						  	<td>Cr 19 # 8 - 17</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					   <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>121346818</td>
+						    <td>202111</td>
+						  	<td>2021-12-10</td>
+						 	<td>233888</td>
+						  	<td>$230.125</td>
+						  	<td>Pendiente</td>
+						  	<td>73008129</td>
+						  	<td>Alejandra Gutierrez</td>
+						  	<td>420100</td>
+						  	<td>Cr 11 # 18 - 44</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134766</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234651</td>
+						  	<td>$431.100</td>
+						  	<td>Pendiente</td>
+						  	<td>1081007991</td>
+						  	<td>Juan Jose Martinez</td>
+						  	<td>420111</td>
+						  	<td>Cl 19 # 11 - 24</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134760</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234649</td>
+						  	<td>$231.210</td>
+						  	<td>Pagada</td>
+						  	<td>1082789123</td>
+						  	<td>Carlos Marquez León</td>
+						  	<td>420121</td>
+						  	<td>Cl 18 # 10 - 9</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134751</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234633</td>
+						  	<td>$312.020</td>
+						  	<td>Pagada</td>
+						  	<td>1080667445</td>
+						  	<td>Maria Manjarrez</td>
+						  	<td>420125</td>
+						  	<td>Cl 18 # 11 - 19</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					   <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134748</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234621</td>
+						  	<td>$122.050</td>
+						  	<td>Pagada</td>
+						  	<td>73117445</td>
+						  	<td>Geraldin Castro</td>
+						  	<td>4201231</td>
+						  	<td>Cl 19 # 10 - 44</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					   <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134752</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234633</td>
+						  	<td>$225.510</td>
+						  	<td>Pendiente</td>
+						  	<td>7198447</td>
+						  	<td>Josefa Guzmán</td>
+						  	<td>4201241</td>
+						  	<td>Cl 18 # 17 - 34</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					   <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134772</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234637</td>
+						  	<td>$289.300</td>
+						  	<td>Pendiente</td>
+						  	<td>56436789</td>
+						  	<td>Magdalena Gomez</td>
+						  	<td>4201278</td>
+						  	<td>Cl 10 # 17 - 4</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134710</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234657</td>
+						  	<td>$199.900</td>
+						  	<td>Pendiente</td>
+						  	<td>56477448</td>
+						  	<td>Magdalena Gomez</td>
+						  	<td>4201222</td>
+						  	<td>Cl 11 # 40 - 17</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12134667</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234888</td>
+						  	<td>$297.400</td>
+						  	<td>Pendiente</td>
+						  	<td>36798123</td>
+						  	<td>Claudia Pineda</td>
+						  	<td>4201990</td>
+						  	<td>Cl 44 # 10 - 70</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+					  
+					  <!-- Inicio Usuario-->
+					  <tr>
+					  		<td>12144878</td>
+						    <td>202111</td>
+						  	<td>2021-12-11</td>
+						 	<td>234891</td>
+						  	<td>$117.200</td>
+						  	<td>Pagada</td>
+						  	<td>128903321</td>
+						  	<td>Ruth Florez</td>
+						  	<td>521890</td>
+						  	<td>Cl 43 # 17 - 33</td>
+						    <td><a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a></td>
+						  	<td><a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a></td>
+					  
+					  </tr>
+					  <!-- Fin Usuario-->
+				
                   
                   
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>ID</th>
-                    <th>Usuario</th>
-                    <th>Nombre</th>
-                    <th>Estado</th>
-                    <th>Editar</th>
+                    <th>N° Factura</th>
+                    <th>Periodo</th>
+                    <th>Vencimiento</th>
+                    <th>P&oacute;liza</th>
+                    <th>Valor</th>
+					<th>Estado</th>
+					<th>ID titular</th>
+					<th>Nombre titular</th>
+					<th>ID predio</th>
+					<th>Dirección Predio</th>
+					<th>Editar</th>
 					<th>Eliminar</th>
                   </tr>
                   </tfoot>
@@ -615,8 +843,9 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0 Beta
     </div>
-    <strong>Copyright &copy; Caracal Caracal - 2021 <a href="#">Caracalcaracal.co</a>.</strong> Todos los Derechos Reservados
+    <strong>Copyright &copy; Misión TIC 2022 - Uninorte - Grupo 1234 - Team 6 - <a href="#">Proyecto Ciclo 4</a>.</strong> Todos los Derechos Reservados
   </footer>
+
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
