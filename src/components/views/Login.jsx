@@ -6,7 +6,7 @@ function Login() {
          <div className="card card-outline card-primary">
             <div className="card-header text-center">
                <a href="index.html" className="h1">
-                  {/* <img src="../images/logo-triple-A.png" alt="test" /> */}
+                  <img src="../images/logo-triple-A.png" alt="test" />
                </a>
             </div>
 

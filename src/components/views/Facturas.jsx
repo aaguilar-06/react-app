@@ -3,14 +3,47 @@ import React, { useEffect, useState } from 'react';
 import UserTopNav from '../partials/UserTopNav';
 import Footer from '../partials/Footer';
 
+import { Link } from 'react-router-dom';
+
 function Facturas() {
+   const [listaFacturas, setListaFacturas] = useState([
+      {
+         factura: 12344232,
+         periodo: 202111,
+         fecha_venc: '2021-12-10',
+         poliza: 12412,
+         valor: 321423,
+         estado: 'pendiente',
+         nit: 123456,
+         titular: 'Carlos Galindo Sierra',
+         predio: 532342,
+         direccion: 'Cra 43 # 82 - 115',
+      },
+      {
+         factura: 121346452,
+         periodo: 202111,
+         fecha_venc: '2021-12-10',
+         poliza: 12412,
+         valor: 221590,
+         estado: 'pendiente',
+         nit: 73007889,
+         titular: 'Carlos Manuel Guerra',
+         predio: 532355,
+         direccion: 'Cra 30 # 11 - 51',
+      },
+   ]);
+
    return (
       <div className="wrapper">
          <UserTopNav />
 
          <aside className="main-sidebar sidebar-dark-primary elevation-4">
             <a href="index.html" className="brand-link">
-               <img src="images/logo-triple-A-2.png" width="200" />
+               <img
+                  src="images/logo-triple-A-2.png"
+                  alt="logo AAA"
+                  width="200"
+               />
             </a>
 
             <div className="sidebar">
@@ -19,10 +52,10 @@ function Facturas() {
                      <img
                         src="dist/img/user2-160x160.jpg"
                         className="img-circle elevation-2"
-                        alt="User Image"
+                        alt="User"
                      />
                   </div>
-                  <div className="info"></div>
+                  <div className="info text-white">Nombre del usuario</div>
                </div>
 
                <nav className="mt-2">
@@ -36,15 +69,9 @@ function Facturas() {
                      <li className="nav-item menu-closed">
                         <a href="#" className="nav-link">
                            <i className="nav-icon fas fa-file-invoice-dollar"></i>
-                           <p>
-                              Facturas{' '}
-                              <span className="badge badge-danger right">
-                                 .
-                              </span>
-                              <i className="right fas fa-angle-left"></i>
-                           </p>
+                           <p>Facturas</p>
                         </a>
-                        <ul className="nav nav-treeview">
+                        {/* <ul className="nav nav-treeview">
                            <li className="nav-item">
                               <a
                                  href="generar-factura.html"
@@ -60,21 +87,15 @@ function Facturas() {
                                  <p>Gestionar</p>
                               </a>
                            </li>
-                        </ul>
+                        </ul> */}
                      </li>
 
                      <li className="nav-item menu-closed">
                         <a href="#" className="nav-link">
                            <i className="nav-icon fas fa-landmark"></i>
-                           <p>
-                              Impuestos & Subsidios{' '}
-                              <span className="badge badge-danger right">
-                                 .
-                              </span>
-                              <i className="right fas fa-angle-left"></i>
-                           </p>
+                           <p>Impuestos & Subsidios </p>
                         </a>
-                        <ul className="nav nav-treeview">
+                        {/* <ul className="nav nav-treeview">
                            <li className="nav-item">
                               <a
                                  href="crear-impuestos.html"
@@ -93,21 +114,21 @@ function Facturas() {
                                  <p>Gestionar</p>
                               </a>
                            </li>
-                        </ul>
+                        </ul> */}
                      </li>
 
                      <li className="nav-item menu-closed">
                         <a href="#" className="nav-link">
                            <i className="nav-icon fas fa-city"></i>
                            <p>
-                              Predios{' '}
-                              <span className="badge badge-warning right">
+                              Predios
+                              {/* <span className="badge badge-warning right">
                                  .
                               </span>
-                              <i className="right fas fa-angle-left"></i>
+                              <i className="right fas fa-angle-left"></i> */}
                            </p>
                         </a>
-                        <ul className="nav nav-treeview">
+                        {/* <ul className="nav nav-treeview">
                            <li className="nav-item">
                               <a href="crear-predios.html" className="nav-link">
                                  <i className="fas fa-plus nav-icon"></i>
@@ -123,7 +144,7 @@ function Facturas() {
                                  <p>Gestionar</p>
                               </a>
                            </li>
-                        </ul>
+                        </ul> */}
                      </li>
 
                      <li className="nav-item">
@@ -131,9 +152,9 @@ function Facturas() {
                            <i className="nav-icon fas fa-check-double"></i>
                            <p>
                               Configuración Valores{' '}
-                              <span className="badge badge-danger right">
+                              {/* <span className="badge badge-danger right">
                                  .
-                              </span>
+                              </span> */}
                            </p>
                         </a>
                      </li>
@@ -143,7 +164,7 @@ function Facturas() {
                            <i className="nav-icon fas fa-columns"></i>
                            <p>
                               Ver Usuarios
-                              <span className="badge badge-info right">25</span>
+                              {/* <span className="badge badge-info right">25</span> */}
                            </p>
                         </a>
                      </li>
@@ -222,67 +243,40 @@ function Facturas() {
                                     </tr>
                                  </thead>
                                  <tbody>
-                                    <tr>
-                                       <td>121346451</td>
-                                       <td>202111</td>
-                                       <td>2021-12-10</td>
-                                       <td>134967</td>
-                                       <td>$321.570</td>
-                                       <td>Pendiente</td>
-                                       <td>12345678</td>
-                                       <td>Carlos Galindo Sierra</td>
-                                       <td>525581</td>
-                                       <td>Cra 43 # 82 - 115</td>
-                                       <td>
-                                          <a
-                                             className="btn btn-info btn-sm"
-                                             href="#"
-                                          >
-                                             <i className="fas fa-pencil-alt"></i>
-                                             Edit
-                                          </a>
-                                       </td>
-                                       <td>
-                                          <a
-                                             className="btn btn-danger btn-sm"
-                                             href="#"
-                                          >
-                                             <i className="fas fa-trash"></i>
-                                             Delete
-                                          </a>
-                                       </td>
-                                    </tr>
-
-                                    <tr>
-                                       <td>121346452</td>
-                                       <td>202111</td>
-                                       <td>2021-12-11</td>
-                                       <td>134987</td>
-                                       <td>$221.590</td>
-                                       <td>Pendiente</td>
-                                       <td>73007889</td>
-                                       <td>Carlos Manuel Guerra</td>
-                                       <td>525530</td>
-                                       <td>Cra 30 # 11 - 51</td>
-                                       <td>
-                                          <a
-                                             className="btn btn-info btn-sm"
-                                             href="#"
-                                          >
-                                             <i className="fas fa-pencil-alt"></i>
-                                             Edit
-                                          </a>
-                                       </td>
-                                       <td>
-                                          <a
-                                             className="btn btn-danger btn-sm"
-                                             href="#"
-                                          >
-                                             <i className="fas fa-trash"></i>
-                                             Delete
-                                          </a>
-                                       </td>
-                                    </tr>
+                                    {listaFacturas.map(info => {
+                                       return (
+                                          <tr>
+                                             <td>{info.factura}</td>
+                                             <td>{info.periodo}</td>
+                                             <td>{info.fecha_venc}</td>
+                                             <td>{info.poliza}</td>
+                                             <td>{info.valor}</td>
+                                             <td>{info.estado}</td>
+                                             <td>{info.nit}</td>
+                                             <td>{info.titular}</td>
+                                             <td>{info.predio}</td>
+                                             <td>{info.direccion}</td>
+                                             <td>
+                                                <Link
+                                                   to="/"
+                                                   className="btn btn-info btn-sm"
+                                                >
+                                                   <i className="fas fa-pencil-alt"></i>
+                                                   Edit
+                                                </Link>
+                                             </td>
+                                             <td>
+                                                <Link
+                                                   to="/"
+                                                   className="btn btn-danger btn-sm"
+                                                >
+                                                   <i className="fas fa-trash"></i>
+                                                   Delete
+                                                </Link>
+                                             </td>
+                                          </tr>
+                                       );
+                                    })}
                                  </tbody>
                                  <tfoot>
                                     <tr>
