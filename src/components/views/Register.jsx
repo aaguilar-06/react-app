@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-function Login() {
+import { Link } from 'react-router-dom';
+
+function Register() {
    return (
       <div className="register-box">
          <div className="card card-outline card-primary">
@@ -114,13 +116,13 @@ function Login() {
                   </div>
                </form>
 
-               <a href="login.html" className="text-center">
+               <Link to="/" className="text-center">
                   ¡Ya estoy registrado! Entrar
-               </a>
+               </Link>
             </div>
          </div>
       </div>
    );
 }
 
-export default Login;
+export default Register;
