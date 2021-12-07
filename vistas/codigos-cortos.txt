@@ -5,6 +5,35 @@
 	  </a>	  
 </div>
 
+#####LOGO 2
+
+<a href="index.html" class="brand-link">
+      <img src="images/logo-triple-A-2.png" width="200">
+    </a>
+
 ###TITULO
 
 <title>Triple A ESP - Registro de Usuario</title>
+
+
+###### Footer 1
+      <b>Version</b> 1.0 Beta<br>
+		<strong>Copyright &copy; Misión TIC 2022 - Uninorte - Grupo 1234 - Team 6 - <a href="#">Proyecto Ciclo 4</a>.</strong> <br>Todos los Derechos Reservados
+    </div>
+
+###### Footer 2
+<i class="fa-solid fa-file-invoice-dollar"></i>
+<i class="fa-solid fa-circle-plus"></i>
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<i class="fa-solid fa-check-double"></i>
+
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0 Beta
+    </div>
+    <strong>Copyright &copy; Misión TIC 2022 - Uninorte - Grupo 1234 - Team 6 - <a href="#">Proyecto Ciclo 4</a>.</strong> Todos los Derechos Reservados
+  </footer>
+
+
